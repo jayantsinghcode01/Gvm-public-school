@@ -1,0 +1,628 @@
+
+
+section {
+    margin: 0px;
+    padding:0px;
+
+}
+.value{
+    display: flex;
+    padding: 20px;
+    margin-right: 0px;
+    background-color: #f2f2f2;
+    align-items: center;
+    gap:350px;
+}
+.navbar{
+    background-color: white;
+    margin-bottom: 100px;
+}
+.navbar ul{
+    margin: 0px;
+    padding: 0px;
+}
+.navbar li{
+    float: left;
+    list-style-type: none;
+    margin: 13px 20px;
+}
+.navbar li a{
+    padding: 110px;
+    text-decoration: none;
+    color: black;
+}
+#logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#schoolimage{
+    border-radius: 40px;
+    margin:0px;
+}
+.container{
+    display: flex;
+    padding: 20px;
+    margin-right: 0px;
+    background-color: white;
+    align-items: center;
+    border-radius: 20px;
+    background: white;
+}
+.content h2{
+    padding-left: 130px;
+}
+.content h4{
+    margin:0px;
+    padding: 50px 50px;
+    text-align: center;
+}
+.container2{
+    display: flex;
+    margin: 20px;
+}
+.line2{
+    background: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin: 0px 20px;
+    height: 400px;
+    width: 400px;
+}
+.line2 h3{
+    padding-left: 40%;
+}
+.content2{
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 0px 20px;
+    height: 400px;
+    width: 400px;
+}
+.container2 h4{
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.line3{
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin: 0px 20px;
+    height: 400px;
+    width: 400px;
+}
+.content2 h2{
+    text-align: center;
+}
+.content2 p{
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.line3 h2{
+    text-align: center;
+}
+.line3 p{
+    text-align: center;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin:0px;
+    padding: 0%;
+    border-radius: 20px;
+}
+/* ================= FOOTER ================= */
+
+.footer {
+    background-color: #1f2937;
+    color: white;
+    margin-top: 40px;
+}
+
+/* Footer ke andar ke 3 sections */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+/* Har footer section */
+.footer-box {
+    width: 30%;
+}
+
+/* Heading */
+.footer-box h2 {
+    margin-bottom: 15px;
+}
+
+.footer-box h3 {
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.footer-box p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Links */
+.footer-box a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* Mouse le jaane par link */
+.footer-box a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom copyright section */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding: 15px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+/* ================= ABOUT PAGE ================= */
+
+
+/* About page heading */
+
+.about-heading {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.about-heading h1 {
+    margin-bottom: 10px;
+}
+
+.about-heading p {
+    font-size: 18px;
+}
+
+
+/* About school section */
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin: 40px;
+}
+
+
+/* School image */
+
+.about-image {
+    width: 50%;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+/* About text */
+
+.about-content {
+    width: 50%;
+}
+
+.about-content h2 {
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Vision and Mission */
+
+.about-section {
+    margin: 40px;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+
+/* Core Values */
+
+.about-values {
+    margin: 40px;
+    text-align: center;
+}
+
+.about-values h2 {
+    margin-bottom: 30px;
+}
+
+
+/* Four value boxes */
+
+.values-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+/* Individual value box */
+
+.value-box {
+    width: 25%;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.value-box h3 {
+    margin-bottom: 15px;
+}
+
+.value-box p {
+    line-height: 1.6;
+}
+
+
+/* ================= ADMISSION PAGE ================= */
+
+
+/* Admission heading */
+
+.admission-heading {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.admission-heading h1 {
+    margin-bottom: 10px;
+}
+
+.admission-heading p {
+    font-size: 18px;
+}
+
+
+/* Admission information */
+
+.admission-info {
+    margin: 40px;
+    padding: 30px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.admission-info h2 {
+    margin-bottom: 20px;
+}
+
+.admission-info p {
+    line-height: 1.7;
+}
+
+
+/* Admission process */
+
+.admission-section {
+    margin: 40px;
+    text-align: center;
+}
+
+.admission-section h2 {
+    margin-bottom: 30px;
+}
+
+
+/* Process boxes */
+
+.process-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+.process-box {
+    width: 25%;
+    padding: 25px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+.process-box h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.process-box h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+
+.process-box p {
+    line-height: 1.6;
+}
+
+
+/* Required documents */
+
+.documents {
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 25px;
+    max-width: 700px;
+    margin: auto;
+}
+
+
+.documents p {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Admission form */
+
+.admission-form-section {
+    width: 60%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+.admission-form-section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.admission-form-section > p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Form labels */
+
+.admission-form-section label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Input, select and textarea */
+
+.admission-form-section input,
+.admission-form-section select,
+.admission-form-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+
+/* Message box */
+
+.admission-form-section textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* Submit button */
+
+.admission-form-section button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* Button hover */
+
+.admission-form-section button:hover {
+    background-color: #374151;
+}
+
+/* ================= CONTACT PAGE ================= */
+
+
+/* Contact heading */
+
+.contact-heading {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+.contact-heading h1 {
+    margin-bottom: 10px;
+}
+
+.contact-heading p {
+    font-size: 18px;
+}
+
+
+/* Main contact area */
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 40px;
+}
+
+
+/* Contact information */
+
+.contact-info {
+    width: 45%;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.contact-info h2 {
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+/* Individual contact box */
+
+.contact-box {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.contact-box h3 {
+    margin-bottom: 8px;
+}
+
+.contact-box p {
+    line-height: 1.5;
+}
+
+
+/* Contact form */
+
+.contact-form {
+    width: 45%;
+    padding: 30px;
+    background-color: #f2f2f2;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* Form labels */
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+/* Input and textarea */
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+
+/* Message box */
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+
+/* Submit button */
+
+.contact-form button {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 30px;
+    background-color: #1f2937;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Button hover */
+
+.contact-form button:hover {
+    background-color: #374151;
+}

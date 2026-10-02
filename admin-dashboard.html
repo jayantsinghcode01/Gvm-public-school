@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - GVM Public School</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .dashboard-header {
+            background: #1f2937;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .dashboard-header h1 {
+            margin: 0;
+        }
+
+        .dashboard-header p {
+            margin-top: 8px;
+        }
+
+        .dashboard-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .dashboard-buttons button {
+            padding: 12px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .dashboard-buttons button:hover {
+            background: #1d4ed8;
+        }
+
+        .data-section {
+            width: 95%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .data-section h2 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            min-width: 800px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #1f2937;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Dashboard Header -->
+
+    <div class="dashboard-header">
+
+        <h1>GVM PUBLIC SCHOOL</h1>
+
+        <p>Admin Dashboard</p>
+
+    </div>
+
+
+    <!-- Buttons -->
+
+    <div class="dashboard-buttons">
+
+        <button onclick="loadAdmissions()">
+            📋 Admission Enquiries
+        </button>
+
+        <button onclick="loadContacts()">
+            ✉️ Contact Messages
+        </button>
+
+    </div>
+
+
+    <!-- Data -->
+
+    <div class="data-section">
+
+        <h2 id="data-title">
+            Select an option
+        </h2>
+
+        <div id="data-container">
+
+            <p>
+                Click a button above to view data.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+
+        // Admission data load karna
+
+        async function loadAdmissions() {
+
+            document.getElementById("data-title").innerText =
+                "Admission Enquiries";
+
+            document.getElementById("data-container").innerHTML =
+                "<p>Loading...</p>";
+
+
+            try {
+
+                const response =
+                    await fetch("/admin/admissions");
+
+                const data =
+                    await response.json();
+
+
+                if (data.length === 0) {
+
+                    document.getElementById("data-container").innerHTML =
+                        "<p>No admission enquiries found.</p>";
+
+                    return;
+
+                }
+
+
+                let html = `
+
+                    <table>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Parent Name</th>
+                            <th>Class</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Date</th>
+
+                        </tr>
+
+                `;
+
+
+                data.forEach(function(item) {
+
+                    html += `
+
+                        <tr>
+
+                            <td>${item.id}</td>
+
+                            <td>${item.student_name}</td>
+
+                            <td>${item.parent_name}</td>
+
+                            <td>${item.class_name}</td>
+
+                            <td>${item.phone}</td>
+
+                            <td>${item.email || ""}</td>
+
+                            <td>${item.message || ""}</td>
+
+                            <td>${item.created_at || ""}</td>
+
+                        </tr>
+
+                    `;
+
+                });
+
+
+                html += "</table>";
+
+
+                document.getElementById("data-container").innerHTML =
+                    html;
+
+
+            } catch (error) {
+
+                console.log(error);
+
+                document.getElementById("data-container").innerHTML =
+                    "<p>Admission data load nahi ho raha.</p>";
+
+            }
+
+        }
+
+
+
+        // Contact data load karna
+
+        async function loadContacts() {
+
+            document.getElementById("data-title").innerText =
+                "Contact Messages";
+
+            document.getElementById("data-container").innerHTML =
+                "<p>Loading...</p>";
+
+
+            try {
+
+                const response =
+                    await fetch("/admin/contacts");
+
+                const data =
+                    await response.json();
+
+
+                if (data.length === 0) {
+
+                    document.getElementById("data-container").innerHTML =
+                        "<p>No contact messages found.</p>";
+
+                    return;
+
+                }
+
+
+                let html = `
+
+                    <table>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Date</th>
+
+                        </tr>
+
+                `;
+
+
+                data.forEach(function(item) {
+
+                    html += `
+
+                        <tr>
+
+                            <td>${item.id}</td>
+
+                            <td>${item.name}</td>
+
+                            <td>${item.email}</td>
+
+                            <td>${item.phone || ""}</td>
+
+                            <td>${item.subject || ""}</td>
+
+                            <td>${item.message}</td>
+
+                            <td>${item.created_at || ""}</td>
+
+                        </tr>
+
+                    `;
+
+                });
+
+
+                html += "</table>";
+
+
+                document.getElementById("data-container").innerHTML =
+                    html;
+
+
+            } catch (error) {
+
+                console.log(error);
+
+                document.getElementById("data-container").innerHTML =
+                    "<p>Contact data load nahi ho raha.</p>";
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
